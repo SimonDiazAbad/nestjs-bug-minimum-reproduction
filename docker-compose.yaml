@@ -23,9 +23,3 @@ services:
       - 3001:3001
     volumes:
       - .:/usr/src/app
-
-  mongo:
-    image: mongo
-    command: mongod --bind_ip_all
-    ports:
-      - 27017:27017
