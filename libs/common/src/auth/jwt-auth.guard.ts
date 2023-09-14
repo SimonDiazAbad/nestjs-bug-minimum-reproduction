@@ -24,7 +24,7 @@ export class JwtAuthGuard implements CanActivate {
       return false;
     }
 
-    // Ignoring this because we just want to test if this compiles. We are not using this logic
+    // Ignoring this because we just want to test if the app runs. We are not using this logic
     this.authClient.send('using this for testing', {
       message: 'hi',
     });
