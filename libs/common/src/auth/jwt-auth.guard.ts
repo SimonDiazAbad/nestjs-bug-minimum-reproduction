@@ -6,10 +6,13 @@ import {
 } from '@nestjs/common';
 import { Observable, map, tap } from 'rxjs';
 import { AUTH_SERVICE } from '@app/common';
+// it is fixed if we used this import instead
+// import { AUTH_SERVICE } from '@app/common/constants';
 import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class JwtAuthGuard implements CanActivate {
+  // here is where AUTH_SERVIVE is undefined
   constructor(@Inject(AUTH_SERVICE) private readonly authClient: ClientProxy) {}
 
   canActivate(
